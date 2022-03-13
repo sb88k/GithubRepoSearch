@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FC4DEF4E27DE1B8A00D06CFA /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4DEF4527DE1B8A00D06CFA /* DataLayer.framework */; };
-		FC4DEF5327DE1B8A00D06CFA /* DataLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DEF5227DE1B8A00D06CFA /* DataLayerTests.swift */; };
 		FC4DEF5427DE1B8A00D06CFA /* DataLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = FC4DEF4827DE1B8A00D06CFA /* DataLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCE8607827DE1BA2001C0375 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE8607727DE1BA2001C0375 /* DomainLayer.framework */; };
 		FCE8607927DE1BA2001C0375 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCE8607727DE1BA2001C0375 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -17,6 +16,12 @@
 		FCE8608127DE1C98001C0375 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8608027DE1C98001C0375 /* URLSessionProtocol.swift */; };
 		FCE8608827DE1D27001C0375 /* GithubRepoSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8608727DE1D27001C0375 /* GithubRepoSearchProvider.swift */; };
 		FCE8609427DE1EE5001C0375 /* RepositoriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8609327DE1EE5001C0375 /* RepositoriesDTO.swift */; };
+		FCE8609727DE2697001C0375 /* ConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8609627DE2697001C0375 /* ConfigurationProtocol.swift */; };
+		FCE8609927DE269D001C0375 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8609827DE269D001C0375 /* Configuration.swift */; };
+		FCE8609D27DE2CC8001C0375 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8609C27DE2CC8001C0375 /* MockNetworkService.swift */; };
+		FCE8609F27DE2CD1001C0375 /* MockConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8609E27DE2CD1001C0375 /* MockConfiguration.swift */; };
+		FCE860A127DE2D3F001C0375 /* GithubRepoSearchProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE860A027DE2D3F001C0375 /* GithubRepoSearchProviderTests.swift */; };
+		FCE860A327DE2E13001C0375 /* EmptyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE860A227DE2E13001C0375 /* EmptyError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,13 +52,18 @@
 		FC4DEF4527DE1B8A00D06CFA /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4DEF4827DE1B8A00D06CFA /* DataLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataLayer.h; sourceTree = "<group>"; };
 		FC4DEF4D27DE1B8A00D06CFA /* DataLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC4DEF5227DE1B8A00D06CFA /* DataLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerTests.swift; sourceTree = "<group>"; };
 		FCE8607727DE1BA2001C0375 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE8607C27DE1C62001C0375 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		FCE8607E27DE1C69001C0375 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FCE8608027DE1C98001C0375 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		FCE8608727DE1D27001C0375 /* GithubRepoSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoSearchProvider.swift; sourceTree = "<group>"; };
 		FCE8609327DE1EE5001C0375 /* RepositoriesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesDTO.swift; sourceTree = "<group>"; };
+		FCE8609627DE2697001C0375 /* ConfigurationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationProtocol.swift; sourceTree = "<group>"; };
+		FCE8609827DE269D001C0375 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		FCE8609C27DE2CC8001C0375 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		FCE8609E27DE2CD1001C0375 /* MockConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfiguration.swift; sourceTree = "<group>"; };
+		FCE860A027DE2D3F001C0375 /* GithubRepoSearchProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoSearchProviderTests.swift; sourceTree = "<group>"; };
+		FCE860A227DE2E13001C0375 /* EmptyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 		FC4DEF4727DE1B8A00D06CFA /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FCE8609527DE268D001C0375 /* Configuration */,
 				FCE8608227DE1CE5001C0375 /* Github */,
 				FCE8607B27DE1C56001C0375 /* Network */,
 				FC4DEF4827DE1B8A00D06CFA /* DataLayer.h */,
@@ -108,7 +119,8 @@
 		FC4DEF5127DE1B8A00D06CFA /* DataLayerTests */ = {
 			isa = PBXGroup;
 			children = (
-				FC4DEF5227DE1B8A00D06CFA /* DataLayerTests.swift */,
+				FCE8609B27DE2CBB001C0375 /* Tests */,
+				FCE8609A27DE2CB4001C0375 /* Mocks */,
 			);
 			path = DataLayerTests;
 			sourceTree = "<group>";
@@ -146,6 +158,33 @@
 				FCE8609327DE1EE5001C0375 /* RepositoriesDTO.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		FCE8609527DE268D001C0375 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8609627DE2697001C0375 /* ConfigurationProtocol.swift */,
+				FCE8609827DE269D001C0375 /* Configuration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		FCE8609A27DE2CB4001C0375 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8609C27DE2CC8001C0375 /* MockNetworkService.swift */,
+				FCE8609E27DE2CD1001C0375 /* MockConfiguration.swift */,
+				FCE860A227DE2E13001C0375 /* EmptyError.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		FCE8609B27DE2CBB001C0375 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FCE860A027DE2D3F001C0375 /* GithubRepoSearchProviderTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE8609727DE2697001C0375 /* ConfigurationProtocol.swift in Sources */,
 				FCE8608127DE1C98001C0375 /* URLSessionProtocol.swift in Sources */,
+				FCE8609927DE269D001C0375 /* Configuration.swift in Sources */,
 				FCE8607F27DE1C69001C0375 /* NetworkService.swift in Sources */,
 				FCE8607D27DE1C62001C0375 /* NetworkServiceProtocol.swift in Sources */,
 				FCE8608827DE1D27001C0375 /* GithubRepoSearchProvider.swift in Sources */,
@@ -271,7 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC4DEF5327DE1B8A00D06CFA /* DataLayerTests.swift in Sources */,
+				FCE860A327DE2E13001C0375 /* EmptyError.swift in Sources */,
+				FCE860A127DE2D3F001C0375 /* GithubRepoSearchProviderTests.swift in Sources */,
+				FCE8609F27DE2CD1001C0375 /* MockConfiguration.swift in Sources */,
+				FCE8609D27DE2CC8001C0375 /* MockNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

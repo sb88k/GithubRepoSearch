@@ -9,6 +9,13 @@ import Foundation
 
 public protocol RepoSearchProviderProtocol {
     
-    func search(with query: String, page: Int, completion: @escaping (Result<Repository, Error>) -> Void)
+    func search(with query: String, page: Int, completion: @escaping (Result<[Repository], Error>) -> Void)
+    
+}
+
+public enum RepoSearchProviderError: Error {
+    
+    case wrongConfiguration
+    case unknownError
     
 }

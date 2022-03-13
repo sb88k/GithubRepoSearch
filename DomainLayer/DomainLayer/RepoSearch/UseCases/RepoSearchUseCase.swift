@@ -9,6 +9,6 @@ import Foundation
 
 public protocol RepoSearchUseCase {
     
-    func search(with query: String, page: Int, completion: @escaping (Result<Repository, Error>) -> Void)
+    func search(with query: String, page: Int, completion: @escaping (Result<[Repository], Error>) -> Void)
     
 }

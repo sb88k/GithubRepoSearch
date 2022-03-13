@@ -9,7 +9,7 @@ import Foundation
 
 public final class GithubRepoSearchInteractor: RepoSearchUseCase {
     
-    public func search(with query: String, page: Int, completion: @escaping (Result<Repository, Error>) -> Void) {
+    public func search(with query: String, page: Int, completion: @escaping (Result<[Repository], Error>) -> Void) {
         
     }
     
