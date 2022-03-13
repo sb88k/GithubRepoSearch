@@ -12,6 +12,9 @@
 		FC4DEF5427DE1B8A00D06CFA /* DataLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = FC4DEF4827DE1B8A00D06CFA /* DataLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCE8607827DE1BA2001C0375 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE8607727DE1BA2001C0375 /* DomainLayer.framework */; };
 		FCE8607927DE1BA2001C0375 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCE8607727DE1BA2001C0375 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FCE8607D27DE1C62001C0375 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8607C27DE1C62001C0375 /* NetworkServiceProtocol.swift */; };
+		FCE8607F27DE1C69001C0375 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8607E27DE1C69001C0375 /* NetworkService.swift */; };
+		FCE8608127DE1C98001C0375 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8608027DE1C98001C0375 /* URLSessionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		FC4DEF4D27DE1B8A00D06CFA /* DataLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4DEF5227DE1B8A00D06CFA /* DataLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerTests.swift; sourceTree = "<group>"; };
 		FCE8607727DE1BA2001C0375 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE8607C27DE1C62001C0375 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		FCE8607E27DE1C69001C0375 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FCE8608027DE1C98001C0375 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 		FC4DEF4727DE1B8A00D06CFA /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FCE8607B27DE1C56001C0375 /* Network */,
 				FC4DEF4827DE1B8A00D06CFA /* DataLayer.h */,
 			);
 			path = DataLayer;
@@ -107,6 +114,16 @@
 				FCE8607727DE1BA2001C0375 /* DomainLayer.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCE8607B27DE1C56001C0375 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8607C27DE1C62001C0375 /* NetworkServiceProtocol.swift */,
+				FCE8607E27DE1C69001C0375 /* NetworkService.swift */,
+				FCE8608027DE1C98001C0375 /* URLSessionProtocol.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +189,7 @@
 				TargetAttributes = {
 					FC4DEF4427DE1B8A00D06CFA = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					FC4DEF4C27DE1B8A00D06CFA = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -219,6 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE8608127DE1C98001C0375 /* URLSessionProtocol.swift in Sources */,
+				FCE8607F27DE1C69001C0375 /* NetworkService.swift in Sources */,
+				FCE8607D27DE1C62001C0375 /* NetworkServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +387,7 @@
 		FC4DEF5827DE1B8A00D06CFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -385,6 +407,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -393,6 +416,7 @@
 		FC4DEF5927DE1B8A00D06CFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -420,6 +444,7 @@
 		FC4DEF5B27DE1B8A00D06CFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -435,6 +460,7 @@
 		FC4DEF5C27DE1B8A00D06CFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
