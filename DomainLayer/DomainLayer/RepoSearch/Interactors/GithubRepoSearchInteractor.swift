@@ -9,6 +9,8 @@ import Foundation
 
 public final class GithubRepoSearchInteractor {
     
+    private var throttledTask: DispatchWorkItem?
+    
     private let githubRepoSearchProvider: RepoSearchProviderProtocol
     
     public init(githubRepoSearchProvider: RepoSearchProviderProtocol) {
@@ -20,7 +22,19 @@ public final class GithubRepoSearchInteractor {
 extension GithubRepoSearchInteractor: RepoSearchUseCase {
     
     public func search(with query: String, page: Int, completion: @escaping (Result<[Repository], Error>) -> Void) {
-        githubRepoSearchProvider.search(with: query, page: page, completion: completion)
+        throttledTask?.cancel()
+        
+        throttledTask = DispatchWorkItem { [weak self] in
+            if self?.throttledTask?.isCancelled == true {
+                return
+            }
+            
+            self?.githubRepoSearchProvider.search(with: query, page: page, completion: completion)
+        }
+        
+        guard let throttledTask = throttledTask else { return }
+        
+        DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + 0.3, execute: throttledTask)
     }
     
 }

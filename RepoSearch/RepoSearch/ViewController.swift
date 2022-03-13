@@ -29,6 +29,9 @@ final class ViewController: UIViewController {
         return controller
     }()
     
+    private var currentQuery: String?
+    private var currentPage = 0
+    
     private var repositories = [Repository]()
     
     private let dependencies: ViewControllerDependencies
@@ -55,7 +58,31 @@ final class ViewController: UIViewController {
 extension ViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
+        guard
+            let query = searchController.searchBar.text,
+            !query.isEmpty
+        else {
+            return
+        }
         
+        currentQuery = query
+        currentPage = 1
+        
+        dependencies.repoSearchUseCase.search(with: query, page: currentPage) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let repositories):
+                    self?.repositories = repositories
+                    
+                    self?.tableView.reloadData()
+                    
+                case .failure:
+                    self?.repositories = []
+                    
+                    self?.tableView.reloadData()
+                }
+            }
+        }
     }
     
 }

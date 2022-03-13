@@ -13,7 +13,7 @@ public struct Repository {
     let ownerName: String
     let name: String
     let title: String
-    let description: String
+    let description: String?
     let url: URL
     
     public init(
@@ -21,7 +21,7 @@ public struct Repository {
         ownerName: String,
         name: String,
         title: String,
-        description: String,
+        description: String?,
         url: URL
     ) {
         self.avatarImageData = avatarImageData

@@ -27,7 +27,7 @@ extension RepositoriesDTO {
         let name: String
         let fullName: String
         let url: URL
-        let description: String
+        let description: String?
         let owner: OwnerDTO
         
         enum CodingKeys: String, CodingKey {
