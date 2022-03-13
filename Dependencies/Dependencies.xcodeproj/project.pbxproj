@@ -12,6 +12,9 @@
 		FC4DEF3327DE1AF200D06CFA /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4DEF3027DE1AF200D06CFA /* DomainLayer.framework */; };
 		FC4DEF3427DE1AF200D06CFA /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC4DEF3027DE1AF200D06CFA /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC542BE927DE1AA90080ECAE /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = FC542BE827DE1AA90080ECAE /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCE860AE27DE3678001C0375 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE860AD27DE3678001C0375 /* AppDependencies.swift */; };
+		FCE860B027DE3684001C0375 /* AppDependenciesComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE860AF27DE3684001C0375 /* AppDependenciesComposition.swift */; };
+		FCE860B227DE36A9001C0375 /* ViewControllerDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE860B127DE36A9001C0375 /* ViewControllerDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,9 @@
 		FC4DEF3027DE1AF200D06CFA /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC542BE527DE1AA90080ECAE /* Dependencies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dependencies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC542BE827DE1AA90080ECAE /* Dependencies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
+		FCE860AD27DE3678001C0375 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		FCE860AF27DE3684001C0375 /* AppDependenciesComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesComposition.swift; sourceTree = "<group>"; };
+		FCE860B127DE36A9001C0375 /* ViewControllerDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +84,18 @@
 		FC542BE727DE1AA90080ECAE /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				FCE860AD27DE3678001C0375 /* AppDependencies.swift */,
+				FCE860AF27DE3684001C0375 /* AppDependenciesComposition.swift */,
+				FCE860AC27DE366F001C0375 /* Dependencies */,
 				FC542BE827DE1AA90080ECAE /* Dependencies.h */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		FCE860AC27DE366F001C0375 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				FCE860B127DE36A9001C0375 /* ViewControllerDependencies.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -127,6 +144,7 @@
 				TargetAttributes = {
 					FC542BE427DE1AA90080ECAE = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -163,6 +181,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE860B027DE3684001C0375 /* AppDependenciesComposition.swift in Sources */,
+				FCE860AE27DE3678001C0375 /* AppDependencies.swift in Sources */,
+				FCE860B227DE36A9001C0375 /* ViewControllerDependencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +315,7 @@
 		FC542BED27DE1AA90080ECAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -313,6 +335,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,6 +344,7 @@
 		FC542BEE27DE1AA90080ECAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

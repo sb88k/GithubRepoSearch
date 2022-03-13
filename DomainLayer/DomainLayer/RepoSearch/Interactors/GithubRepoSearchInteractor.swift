@@ -11,7 +11,7 @@ public final class GithubRepoSearchInteractor {
     
     private let githubRepoSearchProvider: RepoSearchProviderProtocol
     
-    init(githubRepoSearchProvider: RepoSearchProviderProtocol) {
+    public init(githubRepoSearchProvider: RepoSearchProviderProtocol) {
         self.githubRepoSearchProvider = githubRepoSearchProvider
     }
     
