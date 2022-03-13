@@ -15,6 +15,7 @@
 		FCE860AE27DE3678001C0375 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE860AD27DE3678001C0375 /* AppDependencies.swift */; };
 		FCE860B027DE3684001C0375 /* AppDependenciesComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE860AF27DE3684001C0375 /* AppDependenciesComposition.swift */; };
 		FCE860B227DE36A9001C0375 /* ViewControllerDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE860B127DE36A9001C0375 /* ViewControllerDependencies.swift */; };
+		FCE860B727DE3BD5001C0375 /* AppCoordinatorDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE860B627DE3BD5001C0375 /* AppCoordinatorDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,7 @@
 		FCE860AD27DE3678001C0375 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		FCE860AF27DE3684001C0375 /* AppDependenciesComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesComposition.swift; sourceTree = "<group>"; };
 		FCE860B127DE36A9001C0375 /* ViewControllerDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDependencies.swift; sourceTree = "<group>"; };
+		FCE860B627DE3BD5001C0375 /* AppCoordinatorDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		FCE860AC27DE366F001C0375 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				FCE860B627DE3BD5001C0375 /* AppCoordinatorDependencies.swift */,
 				FCE860B127DE36A9001C0375 /* ViewControllerDependencies.swift */,
 			);
 			path = Dependencies;
@@ -183,6 +186,7 @@
 			files = (
 				FCE860B027DE3684001C0375 /* AppDependenciesComposition.swift in Sources */,
 				FCE860AE27DE3678001C0375 /* AppDependencies.swift in Sources */,
+				FCE860B727DE3BD5001C0375 /* AppCoordinatorDependencies.swift in Sources */,
 				FCE860B227DE36A9001C0375 /* ViewControllerDependencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

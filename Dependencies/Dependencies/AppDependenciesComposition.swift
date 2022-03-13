@@ -8,5 +8,5 @@
 import Foundation
 
 protocol AppDependenciesComposition:
-    ViewControllerDependencies
+    AppCoordinatorDependencies
 {}

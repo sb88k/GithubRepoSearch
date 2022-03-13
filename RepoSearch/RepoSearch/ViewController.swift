@@ -6,9 +6,30 @@
 //
 
 import UIKit
+import DomainLayer
 import Dependencies
 
 final class ViewController: UIViewController {
+    
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        
+        return tableView
+    }()
+    
+    private lazy var searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: nil)
+        controller.searchBar.autocorrectionType = .no
+        controller.searchBar.autocapitalizationType = .none
+        controller.searchBar.placeholder = "Enter Search Text"
+        
+        controller.searchResultsUpdater = self
+        
+        return controller
+    }()
+    
+    private var repositories = [Repository]()
     
     private let dependencies: ViewControllerDependencies
     
@@ -24,8 +45,51 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        layout()
     }
 
+}
+
+
+extension ViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+}
+
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        repositories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
+    
+}
+
+private extension ViewController {
+    
+    func layout() {
+        title = "Github Repo Search"
+        
+        navigationItem.searchController = searchController
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(tableView)
+        
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
 }
 
