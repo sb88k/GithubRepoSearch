@@ -10,6 +10,10 @@
 		FC542C0227DE1AC00080ECAE /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC542BF927DE1AC00080ECAE /* DomainLayer.framework */; };
 		FC542C0727DE1AC00080ECAE /* DomainLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC542C0627DE1AC00080ECAE /* DomainLayerTests.swift */; };
 		FC542C0827DE1AC00080ECAE /* DomainLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = FC542BFC27DE1AC00080ECAE /* DomainLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCE8608627DE1D0F001C0375 /* RepoSearchProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8608527DE1D0F001C0375 /* RepoSearchProviderProtocol.swift */; };
+		FCE8608B27DE1D47001C0375 /* RepoSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8608A27DE1D47001C0375 /* RepoSearchUseCase.swift */; };
+		FCE8608D27DE1D5D001C0375 /* GithubRepoSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8608C27DE1D5D001C0375 /* GithubRepoSearchInteractor.swift */; };
+		FCE8609127DE1DF4001C0375 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8609027DE1DF4001C0375 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,10 @@
 		FC542BFC27DE1AC00080ECAE /* DomainLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DomainLayer.h; sourceTree = "<group>"; };
 		FC542C0127DE1AC00080ECAE /* DomainLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC542C0627DE1AC00080ECAE /* DomainLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainLayerTests.swift; sourceTree = "<group>"; };
+		FCE8608527DE1D0F001C0375 /* RepoSearchProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchProviderProtocol.swift; sourceTree = "<group>"; };
+		FCE8608A27DE1D47001C0375 /* RepoSearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchUseCase.swift; sourceTree = "<group>"; };
+		FCE8608C27DE1D5D001C0375 /* GithubRepoSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoSearchInteractor.swift; sourceTree = "<group>"; };
+		FCE8609027DE1DF4001C0375 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 		FC542BFB27DE1AC00080ECAE /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FCE8608327DE1CEC001C0375 /* RepoSearch */,
 				FC542BFC27DE1AC00080ECAE /* DomainLayer.h */,
 			);
 			path = DomainLayer;
@@ -80,6 +89,49 @@
 				FC542C0627DE1AC00080ECAE /* DomainLayerTests.swift */,
 			);
 			path = DomainLayerTests;
+			sourceTree = "<group>";
+		};
+		FCE8608327DE1CEC001C0375 /* RepoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8608F27DE1DEA001C0375 /* Entities */,
+				FCE8608E27DE1D77001C0375 /* Interactors */,
+				FCE8608927DE1D3C001C0375 /* UseCases */,
+				FCE8608427DE1CFB001C0375 /* ProviderProtocols */,
+			);
+			path = RepoSearch;
+			sourceTree = "<group>";
+		};
+		FCE8608427DE1CFB001C0375 /* ProviderProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8608527DE1D0F001C0375 /* RepoSearchProviderProtocol.swift */,
+			);
+			path = ProviderProtocols;
+			sourceTree = "<group>";
+		};
+		FCE8608927DE1D3C001C0375 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8608A27DE1D47001C0375 /* RepoSearchUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		FCE8608E27DE1D77001C0375 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8608C27DE1D5D001C0375 /* GithubRepoSearchInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		FCE8608F27DE1DEA001C0375 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8609027DE1DF4001C0375 /* Repository.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +196,7 @@
 				TargetAttributes = {
 					FC542BF827DE1AC00080ECAE = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					FC542C0027DE1AC00080ECAE = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -191,6 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE8609127DE1DF4001C0375 /* Repository.swift in Sources */,
+				FCE8608627DE1D0F001C0375 /* RepoSearchProviderProtocol.swift in Sources */,
+				FCE8608B27DE1D47001C0375 /* RepoSearchUseCase.swift in Sources */,
+				FCE8608D27DE1D5D001C0375 /* GithubRepoSearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +395,7 @@
 		FC542C0C27DE1AC00080ECAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -357,6 +415,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +424,7 @@
 		FC542C0D27DE1AC00080ECAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -392,6 +452,7 @@
 		FC542C0F27DE1AC00080ECAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -407,6 +468,7 @@
 		FC542C1027DE1AC00080ECAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -15,6 +15,8 @@
 		FCE8607D27DE1C62001C0375 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8607C27DE1C62001C0375 /* NetworkServiceProtocol.swift */; };
 		FCE8607F27DE1C69001C0375 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8607E27DE1C69001C0375 /* NetworkService.swift */; };
 		FCE8608127DE1C98001C0375 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8608027DE1C98001C0375 /* URLSessionProtocol.swift */; };
+		FCE8608827DE1D27001C0375 /* GithubRepoSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8608727DE1D27001C0375 /* GithubRepoSearchProvider.swift */; };
+		FCE8609427DE1EE5001C0375 /* RepositoriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8609327DE1EE5001C0375 /* RepositoriesDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		FCE8607C27DE1C62001C0375 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		FCE8607E27DE1C69001C0375 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FCE8608027DE1C98001C0375 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		FCE8608727DE1D27001C0375 /* GithubRepoSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoSearchProvider.swift; sourceTree = "<group>"; };
+		FCE8609327DE1EE5001C0375 /* RepositoriesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		FC4DEF4727DE1B8A00D06CFA /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FCE8608227DE1CE5001C0375 /* Github */,
 				FCE8607B27DE1C56001C0375 /* Network */,
 				FC4DEF4827DE1B8A00D06CFA /* DataLayer.h */,
 			);
@@ -124,6 +129,23 @@
 				FCE8608027DE1C98001C0375 /* URLSessionProtocol.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		FCE8608227DE1CE5001C0375 /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8609227DE1EDD001C0375 /* Entities */,
+				FCE8608727DE1D27001C0375 /* GithubRepoSearchProvider.swift */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		FCE8609227DE1EDD001C0375 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8609327DE1EE5001C0375 /* RepositoriesDTO.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +262,8 @@
 				FCE8608127DE1C98001C0375 /* URLSessionProtocol.swift in Sources */,
 				FCE8607F27DE1C69001C0375 /* NetworkService.swift in Sources */,
 				FCE8607D27DE1C62001C0375 /* NetworkServiceProtocol.swift in Sources */,
+				FCE8608827DE1D27001C0375 /* GithubRepoSearchProvider.swift in Sources */,
+				FCE8609427DE1EE5001C0375 /* RepositoriesDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
