@@ -116,7 +116,6 @@ extension SearchViewController: UISearchResultsUpdating {
                     self?.repositories = repositories
                     
                     self?.tableView.reloadData()
-                    
                     self?.tableView.tableFooterView = UIView()
                     
                 case .failure(let error):
@@ -157,6 +156,7 @@ extension SearchViewController: UITableViewDelegate {
                         self?.repositories.append(contentsOf: repositories)
                         
                         self?.tableView.reloadData()
+                        self?.tableView.tableFooterView = UIView()
                         
                     case .failure(let error):
                         if case RepoSearchUseCaseError.noMorePage = error {

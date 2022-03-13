@@ -104,11 +104,11 @@ private extension RepositoryTableViewCell {
         let informationView = UIView()
         informationView.addSubview(informationStackView)
         
-        NSLayoutConstraint.activate([
+        let informationStackViewContraints = [
             informationStackView.leadingAnchor.constraint(equalTo: informationView.leadingAnchor),
             informationStackView.trailingAnchor.constraint(equalTo: informationView.trailingAnchor),
             informationStackView.centerYAnchor.constraint(equalTo: informationView.centerYAnchor)
-        ])
+        ]
         
         let upperStackView = UIStackView()
         upperStackView.axis = .horizontal
@@ -139,7 +139,7 @@ private extension RepositoryTableViewCell {
         
         contentView.addSubview(mainStackView)
         
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate(informationStackViewContraints + [
             mainStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             mainStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
