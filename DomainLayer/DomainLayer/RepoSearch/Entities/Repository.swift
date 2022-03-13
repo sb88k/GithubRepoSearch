@@ -9,12 +9,12 @@ import Foundation
 
 public struct Repository {
     
-    let avatarImageData: Data?
-    let ownerName: String
-    let name: String
-    let title: String
-    let description: String?
-    let url: URL
+    public let avatarImageData: Data?
+    public let ownerName: String
+    public let name: String
+    public let title: String
+    public let description: String?
+    public let url: URL
     
     public init(
         avatarImageData: Data?,

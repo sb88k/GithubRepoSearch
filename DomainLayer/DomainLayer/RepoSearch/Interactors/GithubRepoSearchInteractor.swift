@@ -29,12 +29,28 @@ extension GithubRepoSearchInteractor: RepoSearchUseCase {
                 return
             }
             
-            self?.githubRepoSearchProvider.search(with: query, page: page, completion: completion)
+            self?.githubRepoSearchProvider.search(with: query, page: page) { result in
+                switch result {
+                case .success(let repositories):
+                    if repositories.count == 0 {
+                        completion(.failure(RepoSearchUseCaseError.noMorePage))
+                    } else {
+                        completion(.success(repositories))
+                    }
+                    
+                case .failure(let error):
+                    if case RepoSearchProviderError.rateLimited = error {
+                        completion(.failure(RepoSearchUseCaseError.rateLimited))
+                    } else {
+                        completion(.failure(error))
+                    }
+                }
+            }
         }
         
         guard let throttledTask = throttledTask else { return }
         
-        DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + 0.3, execute: throttledTask)
+        DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + 0.5, execute: throttledTask)
     }
     
 }

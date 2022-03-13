@@ -17,5 +17,6 @@ public enum RepoSearchProviderError: Error {
     
     case wrongConfiguration
     case unknownError
+    case rateLimited
     
 }

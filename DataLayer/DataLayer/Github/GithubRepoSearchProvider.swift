@@ -64,7 +64,7 @@ extension GithubRepoSearchProvider: RepoSearchProviderProtocol {
                         repositoriesDTO = try JSONDecoder().decode(RepositoriesDTO.self, from: data)
                         
                     } catch {
-                        lastestError = error
+                        lastestError = RepoSearchProviderError.rateLimited
                         
                     }
                     

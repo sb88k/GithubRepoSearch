@@ -12,7 +12,7 @@ import Dependencies
 final class AppCoordinator {
     
     private var navigationController: UINavigationController?
-    private var viewController: ViewController?
+    private var viewController: SearchViewController?
     
     private let dependencies: AppCoordinatorDependencies
     
@@ -22,7 +22,7 @@ final class AppCoordinator {
     
     func start() -> UIViewController {
         
-        let viewController = ViewController(dependencies: dependencies)
+        let viewController = SearchViewController(dependencies: dependencies)
         
         self.viewController = viewController
         
