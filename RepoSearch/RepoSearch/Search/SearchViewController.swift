@@ -99,6 +99,7 @@ extension SearchViewController: UISearchResultsUpdating {
             let query = searchController.searchBar.text,
             !query.isEmpty
         else {
+            currentQuery = nil
             return
         }
         

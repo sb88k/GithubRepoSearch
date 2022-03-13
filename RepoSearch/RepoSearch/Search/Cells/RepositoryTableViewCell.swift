@@ -101,14 +101,6 @@ private extension RepositoryTableViewCell {
             createInformationStackView(with: "Title", informationLabel: repoTitleLabel),
         ].forEach(informationStackView.addArrangedSubview)
         
-        let imageStackView = UIStackView()
-        imageStackView.axis = .vertical
-        
-        [
-            avatarImageView
-        ].forEach(imageStackView.addArrangedSubview)
-        imageStackView.alignment = .center
-        
         let informationView = UIView()
         informationView.addSubview(informationStackView)
         
@@ -120,20 +112,16 @@ private extension RepositoryTableViewCell {
         
         let upperStackView = UIStackView()
         upperStackView.axis = .horizontal
-        upperStackView.spacing = 4
+        upperStackView.spacing = 8
         
         [
-            imageStackView,
+            avatarImageView,
             informationView
         ].forEach(upperStackView.addArrangedSubview)
         
-        let descriptionLabel = UILabel()
-        descriptionLabel.text = "Description"
-        descriptionLabel.font = .boldSystemFont(ofSize: 15)
+        let descriptionLabel = createTitleLabel(with: "Description")
         
-        let urlLabel = UILabel()
-        urlLabel.text = "URL"
-        urlLabel.font = .boldSystemFont(ofSize: 15)
+        let urlLabel = createTitleLabel(with: "URL")
         
         let mainStackView = UIStackView()
         mainStackView.axis = .vertical
@@ -165,11 +153,7 @@ private extension RepositoryTableViewCell {
         stackView.spacing = 4
         stackView.alignment = .top
         
-        let titleLabel = UILabel()
-        titleLabel.font = .boldSystemFont(ofSize: 15)
-        titleLabel.text = title
-        titleLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
-        titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        let titleLabel = createTitleLabel(with: title)
         
         [
             titleLabel,
@@ -178,6 +162,16 @@ private extension RepositoryTableViewCell {
         ].forEach(stackView.addArrangedSubview)
         
         return stackView
+    }
+    
+    func createTitleLabel(with title: String) -> UILabel {
+        let titleLabel = UILabel()
+        titleLabel.font = .boldSystemFont(ofSize: 15)
+        titleLabel.text = title
+        titleLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
+        titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        
+        return titleLabel
     }
     
 }
